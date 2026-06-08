@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ozone Shower Advisor | Find Your Perfect Shower Enclosure",
+  title: "Ozone | Find Your Perfect Shower Enclosure",
   description:
     "AI-powered shower advisor by Ozone India. Get personalized recommendations for glass shower enclosures, fittings, and accessories.",
   openGraph: {
