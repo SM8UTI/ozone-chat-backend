@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { openrouter } from "@/lib/model";
 import { chatTools } from "@/lib/tools";
 import { buildProductContext } from "@/lib/product-context";
-import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt } from "@/data/prompts";
+import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt, internalTeamSystemPrompt } from "@/data/prompts";
 import { enclosures } from "@/data/enclosures";
 import { fittings } from "@/data/fittings";
 import type { AnswerType, Enclosure, Fitting, Persona, Question } from "@/types";
@@ -198,9 +198,9 @@ export async function POST(req: Request) {
       );
     }
 
-    if (!body.persona || !["homeowner", "architect", "dealer"].includes(body.persona)) {
+    if (!body.persona || !["homeowner", "architect", "dealer", "internal_team"].includes(body.persona)) {
       return NextResponse.json(
-        { error: 'persona is required and must be "homeowner", "architect", or "dealer"' },
+        { error: 'persona is required and must be "homeowner", "architect", "dealer", or "internal_team"' },
         { status: 400, headers: corsHeaders }
       );
     }
@@ -212,7 +212,9 @@ export async function POST(req: Request) {
         ? architectSystemPrompt
         : persona === "dealer"
           ? dealerSystemPrompt
-          : homeownerSystemPrompt;
+          : persona === "internal_team"
+            ? internalTeamSystemPrompt
+            : homeownerSystemPrompt;
 
     const modelId = hasMultimodalContent(messages) ? VISION_MODEL : TEXT_MODEL;
 

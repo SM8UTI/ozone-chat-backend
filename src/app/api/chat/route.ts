@@ -2,7 +2,7 @@ import { streamText, convertToModelMessages, stepCountIs, type UIMessage } from 
 import { openrouter } from "@/lib/model";
 import { chatTools } from "@/lib/tools";
 import { buildProductContext } from "@/lib/product-context";
-import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt } from "@/data/prompts";
+import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt, internalTeamSystemPrompt } from "@/data/prompts";
 import type { Persona } from "@/types";
 
 export async function POST(req: Request) {
@@ -16,7 +16,9 @@ export async function POST(req: Request) {
       ? architectSystemPrompt
       : persona === "dealer"
         ? dealerSystemPrompt
-        : homeownerSystemPrompt;
+        : persona === "internal_team"
+          ? internalTeamSystemPrompt
+          : homeownerSystemPrompt;
 
   const modelMessages = await convertToModelMessages(messages);
 

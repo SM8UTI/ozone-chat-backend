@@ -56,7 +56,7 @@ export interface Fitting {
 }
 
 // Chat / AI types
-export type Persona = "homeowner" | "architect" | "dealer";
+export type Persona = "homeowner" | "architect" | "dealer" | "internal_team";
 
 export type AnswerType =
   | "open_ended_question"

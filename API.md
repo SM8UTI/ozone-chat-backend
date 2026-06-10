@@ -59,7 +59,7 @@ Send a conversation and receive the AI advisor's response as JSON.
 | Field      | Type     | Required | Description                                                                 |
 | ---------- | -------- | -------- | --------------------------------------------------------------------------- |
 | `messages` | array    | Yes      | Conversation history as an array of message objects (see below).            |
-| `persona`  | string   | Yes      | User persona. Must be `"homeowner"`, `"architect"`, or `"dealer"`.          |
+| `persona`  | string   | Yes      | User persona. Must be `"homeowner"`, `"architect"`, `"dealer"`, or `"internal_team"`. |
 
 ### Message Object
 
@@ -198,6 +198,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 | Homeowner | `"homeowner"` | Warm, jargon-free advisor for bathroom renovations. Guides through discovery and recommendations. |
 | Architect | `"architect"` | Technical, specification-focused advisor for professional projects and bulk specifications.        |
 | Dealer    | `"dealer"`    | Sales-focused assistant that helps dealers qualify customers and close sales.                      |
+| Internal Team | `"internal_team"` | AI interviewer that extracts technical decision-making knowledge from fabricators and engineers. |
 
 ---
 
@@ -308,7 +309,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 ```
 
 ```json
-{ "error": "persona is required and must be \"homeowner\", \"architect\", or \"dealer\"" }
+{ "error": "persona is required and must be \"homeowner\", \"architect\", \"dealer\", or \"internal_team\"" }
 ```
 
 ### 500 Internal Server Error
