@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { Calendar, Phone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import type { Persona } from "@/types";
 
 interface ConsultationCTAProps {
   productInterest?: string;
-  persona: "homeowner" | "architect" | "dealer";
+  persona: Persona;
 }
 
 export const ConsultationCTA = ({
