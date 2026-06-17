@@ -43,24 +43,24 @@ export const ComparisonTable = ({ enclosureIds }: ComparisonTableProps) => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="overflow-hidden rounded-xl border border-[var(--ozone-border)] bg-white shadow-sm"
+      className="overflow-hidden rounded-xl border border-[var(--brand-border)] bg-white shadow-sm"
     >
-      <div className="border-b border-[var(--ozone-border)] bg-[var(--ozone-bg-blue-gray)] px-4 py-2.5">
-        <h4 className="text-sm font-bold text-[var(--ozone-primary)]">
+      <div className="border-b border-[var(--brand-border)] bg-[var(--brand-bg-blue-gray)] px-4 py-2.5">
+        <h4 className="text-sm font-bold text-[var(--brand-primary)]">
           Product Comparison
         </h4>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
-            <tr className="border-b border-[var(--ozone-border)]">
-              <th className="px-3 py-2 text-left font-medium text-[var(--ozone-text-secondary)]">
+            <tr className="border-b border-[var(--brand-border)]">
+              <th className="px-3 py-2 text-left font-medium text-[var(--brand-text-secondary)]">
                 Feature
               </th>
               {items.map((item) => (
                 <th
                   key={item!.id}
-                  className="px-3 py-2 text-left font-bold text-[var(--ozone-primary)]"
+                  className="px-3 py-2 text-left font-bold text-[var(--brand-primary)]"
                 >
                   {item!.name}
                 </th>
@@ -74,16 +74,16 @@ export const ComparisonTable = ({ enclosureIds }: ComparisonTableProps) => {
                 className={
                   i % 2 === 0
                     ? "bg-white"
-                    : "bg-[var(--ozone-bg-light)]"
+                    : "bg-[var(--brand-bg-light)]"
                 }
               >
-                <td className="px-3 py-2 font-medium text-[var(--ozone-text-secondary)]">
+                <td className="px-3 py-2 font-medium text-[var(--brand-text-secondary)]">
                   {row.label}
                 </td>
                 {items.map((item) => (
                   <td
                     key={item!.id}
-                    className="px-3 py-2 text-[var(--ozone-text)]"
+                    className="px-3 py-2 text-[var(--brand-text)]"
                   >
                     {row.getValue(item)}
                   </td>

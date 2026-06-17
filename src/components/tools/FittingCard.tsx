@@ -28,25 +28,25 @@ export const FittingCard = ({ fittingId }: FittingCardProps) => {
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}
-      className="flex items-start gap-3 rounded-lg border border-[var(--ozone-border)] bg-white p-3 shadow-sm"
+      className="flex items-start gap-3 rounded-lg border border-[var(--brand-border)] bg-white p-3 shadow-sm"
     >
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--ozone-bg-blue-gray)]">
-        <Wrench className="h-4 w-4 text-[var(--ozone-primary)]" />
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-bg-blue-gray)]">
+        <Wrench className="h-4 w-4 text-[var(--brand-primary)]" />
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
-          <h5 className="text-sm font-semibold text-[var(--ozone-text)]">
+          <h5 className="text-sm font-semibold text-[var(--brand-text)]">
             {fitting.name}
           </h5>
           <Badge variant="outline" className="text-[10px]">
             {categoryLabel[fitting.category]}
           </Badge>
         </div>
-        <p className="mt-0.5 text-xs text-[var(--ozone-text-secondary)] leading-relaxed">
+        <p className="mt-0.5 text-xs text-[var(--brand-text-secondary)] leading-relaxed">
           {fitting.description}
         </p>
         {fitting.colors.length > 0 && (
-          <p className="mt-1 text-[10px] text-[var(--ozone-text-secondary)]">
+          <p className="mt-1 text-[10px] text-[var(--brand-text-secondary)]">
             Finishes: {fitting.colors.join(", ")}
           </p>
         )}

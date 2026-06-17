@@ -28,7 +28,7 @@ const PERSONAS = [
     starters: [
       "I'm specifying showers for a 50-unit residential project",
       "Need frameless options for a luxury villa bathroom",
-      "Compare Stealth vs Outliner series specs",
+      "Compare specifications and options",
     ],
     href: "/chat/architect",
     icon: "ruler" as const,
@@ -49,31 +49,12 @@ const PERSONAS = [
   },
 ];
 
-const EXPERIENCE_CENTRES = [
-  {
-    city: "Delhi",
-    address: "Mehrauli-Gurgaon Road, Gadaipur, Sector-28, New Delhi",
-  },
-  {
-    city: "Bengaluru",
-    address: "100 Feet Rd, Defence Colony, Indiranagar",
-  },
-  {
-    city: "Mohali",
-    address: "Mohali City Center-2, Block F, SAS Nagar",
-  },
-  {
-    city: "Jaipur",
-    address: "New Aatish Market, Metro Pillar Number 46",
-  },
-];
-
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero */}
-      <section className="relative flex flex-1 flex-col items-center justify-center bg-[var(--ozone-primary)] px-4 py-16 text-white md:py-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--ozone-dark)] to-[var(--ozone-primary)]" />
+      <section className="relative flex flex-1 flex-col items-center justify-center bg-[var(--brand-primary)] px-4 py-16 text-white md:py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--brand-dark)] to-[var(--brand-primary)]" />
 
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           {/* Logo */}
@@ -83,12 +64,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://files.ozone.in/Images/logo.webp"
-              alt="Ozone India"
-              className="mx-auto h-10 brightness-0 invert md:h-12"
-            />
+            <span className="text-3xl font-bold tracking-tight">SmartShower</span>
           </motion.div>
 
           <motion.div
@@ -120,7 +96,7 @@ export default function LandingPage() {
             className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/80"
           >
             Tell us about your space and preferences. Our AI advisor will
-            recommend the ideal Ozone shower enclosure, fittings, and
+            recommend the ideal shower enclosure, fittings, and
             accessories — personalized just for you.
           </motion.p>
 
@@ -133,64 +109,23 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Experience Centres */}
-      <section className="bg-[var(--ozone-bg-light)] px-4 py-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-8 text-center text-2xl font-bold text-[var(--ozone-primary)]">
-            Visit Our Experience Centres
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {EXPERIENCE_CENTRES.map((centre) => (
-              <div
-                key={centre.city}
-                className="rounded-lg bg-white p-4 shadow-sm"
-              >
-                <div className="mb-2 flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-[var(--ozone-primary)]" />
-                  <h3 className="font-semibold text-[var(--ozone-primary)]">
-                    {centre.city}
-                  </h3>
-                </div>
-                <p className="text-sm text-[var(--ozone-text-secondary)]">
-                  {centre.address}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="bg-[var(--ozone-primary)] px-4 py-8 text-white">
+      <footer className="bg-[var(--brand-primary)] px-4 py-8 text-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://files.ozone.in/Images/logo.webp"
-              alt="Ozone India"
-              className="h-6 brightness-0 invert"
-            />
+            <span className="text-lg font-bold">SmartShower</span>
             <span className="text-sm text-white/70">
-              India&apos;s Leading Architectural Hardware Manufacturer
+              Your AI Bathroom Guide
             </span>
           </div>
           <div className="flex items-center gap-6 text-sm text-white/70">
-            <a
-              href="tel:+919310012300"
-              className="flex items-center gap-1.5 transition-colors hover:text-white"
-              aria-label="Call Ozone customer care"
-            >
+            <span className="flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5" />
-              +91-9310012300
-            </a>
-            <a
-              href="https://www.ozone.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-white"
-            >
-              ozone.in
-            </a>
+              Support
+            </span>
+            <span className="text-white/70">
+              smartshower.ai
+            </span>
           </div>
         </div>
       </footer>

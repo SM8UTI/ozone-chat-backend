@@ -82,14 +82,14 @@
   --sidebar-border: #CBCBCB;
   --sidebar-ring: #1F4E8C;
 
-  --ozone-primary: #00407F;
-  --ozone-dark: #003B82;
-  --ozone-accent: #1F4E8C;
-  --ozone-bg-light: #F0F1F1;
-  --ozone-bg-blue-gray: #E6ECF2;
-  --ozone-text: #333333;
-  --ozone-text-secondary: #6F6969;
-  --ozone-border: #CBCBCB;
+  --brand-primary: #00407F;
+  --brand-dark: #003B82;
+  --brand-accent: #1F4E8C;
+  --brand-bg-light: #F0F1F1;
+  --brand-bg-blue-gray: #E6ECF2;
+  --brand-text: #333333;
+  --brand-text-secondary: #6F6969;
+  --brand-border: #CBCBCB;
 }
 
 .dark {

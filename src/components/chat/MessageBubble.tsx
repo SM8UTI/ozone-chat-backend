@@ -26,12 +26,12 @@ export const MessageBubble = ({ role, content, children }: MessageBubbleProps) =
       <div
         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
           isUser
-            ? "bg-[var(--ozone-bg-blue-gray)]"
-            : "bg-[var(--ozone-primary)]"
+            ? "bg-[var(--brand-bg-blue-gray)]"
+            : "bg-[var(--brand-primary)]"
         }`}
       >
         {isUser ? (
-          <User className="h-4 w-4 text-[var(--ozone-primary)]" />
+          <User className="h-4 w-4 text-[var(--brand-primary)]" />
         ) : (
           <span className="text-xs font-bold text-white">O</span>
         )}
@@ -45,8 +45,8 @@ export const MessageBubble = ({ role, content, children }: MessageBubbleProps) =
           <div
             className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
               isUser
-                ? "rounded-tr-sm bg-[var(--ozone-primary)] text-white"
-                : "rounded-tl-sm border border-[var(--ozone-border)] bg-white text-[var(--ozone-text)] shadow-sm"
+                ? "rounded-tr-sm bg-[var(--brand-primary)] text-white"
+                : "rounded-tl-sm border border-[var(--brand-border)] bg-white text-[var(--brand-text)] shadow-sm"
             }`}
           >
             <div className="whitespace-pre-wrap">{content}</div>

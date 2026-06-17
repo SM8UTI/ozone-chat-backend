@@ -25,7 +25,7 @@ export const SuggestionChips = ({
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2, delay: i * 0.05 }}
           onClick={() => onSelect(suggestion)}
-          className="rounded-full border border-[var(--ozone-primary)] px-4 py-2 text-sm text-[var(--ozone-primary)] transition-all hover:bg-[var(--ozone-primary)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--ozone-accent)] focus:ring-offset-1"
+          className="rounded-full border border-[var(--brand-primary)] px-4 py-2 text-sm text-[var(--brand-primary)] transition-all hover:bg-[var(--brand-primary)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] focus:ring-offset-1"
           tabIndex={0}
           aria-label={`Send: ${suggestion}`}
         >

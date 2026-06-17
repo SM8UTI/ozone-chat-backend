@@ -39,7 +39,7 @@ export const ChatInput = ({
   return (
     <form
       onSubmit={onSubmit}
-      className="border-t border-[var(--ozone-border)] bg-white px-4 py-3"
+      className="border-t border-[var(--brand-border)] bg-white px-4 py-3"
     >
       <div className="mx-auto flex max-w-3xl items-end gap-3">
         <div className="relative flex-1">
@@ -54,14 +54,14 @@ export const ChatInput = ({
             placeholder={placeholder}
             rows={1}
             disabled={isLoading}
-            className="w-full resize-none rounded-xl border border-[var(--ozone-border)] bg-[var(--ozone-bg-light)] px-4 py-3 text-sm text-[var(--ozone-text)] placeholder:text-[var(--ozone-text-secondary)] focus:border-[var(--ozone-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--ozone-primary)] disabled:opacity-50"
+            className="w-full resize-none rounded-xl border border-[var(--brand-border)] bg-[var(--brand-bg-light)] px-4 py-3 text-sm text-[var(--brand-text)] placeholder:text-[var(--brand-text-secondary)] focus:border-[var(--brand-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-primary)] disabled:opacity-50"
             aria-label="Chat message input"
           />
         </div>
         <button
           type="submit"
           disabled={!value.trim() || isLoading}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--ozone-primary)] text-white transition-all hover:bg-[var(--ozone-dark)] disabled:opacity-40 disabled:hover:bg-[var(--ozone-primary)]"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--brand-primary)] text-white transition-all hover:bg-[var(--brand-dark)] disabled:opacity-40 disabled:hover:bg-[var(--brand-primary)]"
           aria-label="Send message"
           tabIndex={0}
         >

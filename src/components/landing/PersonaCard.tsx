@@ -40,39 +40,39 @@ export const PersonaCard = ({
     >
       <Link
         href={href}
-        className="group block rounded-xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[var(--ozone-accent)] focus:ring-offset-2"
+        className="group block rounded-xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-accent)] focus:ring-offset-2"
         tabIndex={0}
         aria-label={`Start chat as ${title}`}
       >
-        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--ozone-bg-blue-gray)]">
-          <Icon className="h-7 w-7 text-[var(--ozone-primary)]" />
+        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--brand-bg-blue-gray)]">
+          <Icon className="h-7 w-7 text-[var(--brand-primary)]" />
         </div>
 
-        <p className="mb-1 text-sm font-medium uppercase tracking-wider text-[var(--ozone-text-secondary)]">
+        <p className="mb-1 text-sm font-medium uppercase tracking-wider text-[var(--brand-text-secondary)]">
           {subtitle}
         </p>
-        <h3 className="mb-3 text-2xl font-bold text-[var(--ozone-primary)]">
+        <h3 className="mb-3 text-2xl font-bold text-[var(--brand-primary)]">
           {title}
         </h3>
-        <p className="mb-6 text-[var(--ozone-text-secondary)] leading-relaxed">
+        <p className="mb-6 text-[var(--brand-text-secondary)] leading-relaxed">
           {description}
         </p>
 
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-wider text-[var(--ozone-text-secondary)]">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[var(--brand-text-secondary)]">
             Try asking
           </p>
           {starters.map((starter) => (
             <p
               key={starter}
-              className="rounded-lg border border-[var(--ozone-border)] px-3 py-2 text-sm text-[var(--ozone-text)] transition-colors group-hover:border-[var(--ozone-primary)] group-hover:bg-[var(--ozone-bg-blue-gray)]"
+              className="rounded-lg border border-[var(--brand-border)] px-3 py-2 text-sm text-[var(--brand-text)] transition-colors group-hover:border-[var(--brand-primary)] group-hover:bg-[var(--brand-bg-blue-gray)]"
             >
               &ldquo;{starter}&rdquo;
             </p>
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[var(--ozone-primary)] transition-all group-hover:gap-3">
+        <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[var(--brand-primary)] transition-all group-hover:gap-3">
           Start conversation
           <span className="transition-transform group-hover:translate-x-1">
             →

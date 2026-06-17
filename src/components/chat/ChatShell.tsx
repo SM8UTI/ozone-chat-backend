@@ -151,9 +151,9 @@ export const ChatShell = ({
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="flex h-screen flex-col bg-[var(--ozone-bg-light)]">
+    <div className="flex h-screen flex-col bg-[var(--brand-bg-light)]">
       {/* Header */}
-      <header className="flex items-center gap-3 border-b border-[var(--ozone-border)] bg-[var(--ozone-primary)] px-4 py-3 text-white">
+      <header className="flex items-center gap-3 border-b border-[var(--brand-border)] bg-[var(--brand-primary)] px-4 py-3 text-white">
         <Link
           href="/"
           className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10"
@@ -163,15 +163,10 @@ export const ChatShell = ({
           <ArrowLeft className="h-5 w-5" />
         </Link>
         <div className="flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://files.ozone.in/Images/logo.webp"
-            alt="Ozone"
-            className="h-6 brightness-0 invert"
-          />
+          <span className="font-bold text-lg">SmartShower</span>
           <div>
             <h1 className="text-sm font-semibold leading-tight">{title}</h1>
-            <p className="text-xs text-white/70">Powered by Ozone India</p>
+            <p className="text-xs text-white/70">Powered by Smart Advisor</p>
           </div>
         </div>
       </header>
@@ -181,17 +176,17 @@ export const ChatShell = ({
         <div className="mx-auto max-w-3xl">
           {!hasMessages && (
             <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--ozone-primary)]">
-                <span className="text-2xl font-bold text-white">O</span>
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--brand-primary)]">
+                <span className="text-2xl font-bold text-white">S</span>
               </div>
-              <h2 className="mb-2 text-xl font-bold text-[var(--ozone-primary)]">
+              <h2 className="mb-2 text-xl font-bold text-[var(--brand-primary)]">
                 {title}
               </h2>
-              <p className="mb-8 max-w-md text-sm text-[var(--ozone-text-secondary)]">
+              <p className="mb-8 max-w-md text-sm text-[var(--brand-text-secondary)]">
                 {persona === "homeowner"
                   ? "I'll help you find the perfect glass shower enclosure for your bathroom. Tell me about your space, and I'll guide you to the best option."
                   : persona === "dealer"
-                    ? "I'll help you qualify your customer and recommend the right Ozone product. Tell me about the walk-in, and I'll guide you through the discovery."
+                    ? "I'll help you qualify your customer and recommend the right product. Tell me about the walk-in, and I'll guide you through the discovery."
                     : "I'll help you specify the right shower systems for your project. Share your requirements, and I'll provide detailed product recommendations."}
               </p>
               <SuggestionChips

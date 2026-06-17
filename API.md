@@ -1,10 +1,10 @@
-# Ozone Shower Advisor 
+# Smart Shower Shower Advisor 
 
 ## Overview
 
 
 
-The Ozone Shower Advisor API provides an AI-powered conversational interface for recommending glass shower enclosures, fittings, and accessories from [Ozone India](https://www.ozone.in). The API accepts a conversation history (with optional image/PDF attachments) and returns the assistant's reply along with structured data including product recommendations, question options, and conversation summaries.
+The Smart Shower Shower Advisor API provides an AI-powered conversational interface for recommending glass shower enclosures, fittings, and accessories from [Smart Shower India](https://www.smartshower.ai). The API accepts a conversation history (with optional image/PDF attachments) and returns the assistant's reply along with structured data including product recommendations, question options, and conversation summaries.
 
 **Base URL:**
 
@@ -90,10 +90,10 @@ The `content` field accepts either:
 
 ### Content Part Types
 
-| Type    | Fields                                  | Description                                  |
-| ------- | --------------------------------------- | -------------------------------------------- |
-| `text`  | `text` (string)                         | Plain text content.                          |
-| `image` | `image` (string)                        | Image as a URL or base64 data URI.           |
+| Type    | Fields                                         | Description                                |
+| ---------| ------------------------------------------------| --------------------------------------------|
+| `text`  | `text` (string)                                | Plain text content.                        |
+| `image` | `image` (string)                               | Image as a URL or base64 data URI.         |
 | `file`  | `file.filename` (string), `file.data` (string) | PDF file as base64 data URI with filename. |
 
 **Image formats:** JPEG, PNG, WebP, GIF. Provide as a public URL or base64 data URI (`data:image/jpeg;base64,...`).
@@ -154,7 +154,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 | `maintenanceLevel`  | string            | `"easy"` or `"moderate"`.                        |
 | `spaceRequirement`  | string            | `"space-saving"`, `"needs-clearance"`, or `"flexible"`. |
 | `description`       | string            | Full product description.                        |
-| `ozoneUrl`          | string            | Product page URL.                                |
+| `productUrl`          | string            | Product page URL.                                |
 | `catalogUrl`        | string            | Catalog page URL.                                |
 
 **Fitting object:**
@@ -168,7 +168,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 | `compatibleWith` | string[] | Compatible enclosure IDs.                |
 | `colors`         | string[] | Available colors/finishes.               |
 | `description`    | string   | Product description.                     |
-| `ozoneUrl`       | string   | Product page URL.                        |
+| `productUrl`       | string   | Product page URL.                        |
 
 ### Usage Object
 
@@ -268,9 +268,9 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
       "idealFor": ["Luxury bathrooms", "Master suites", "..."],
       "maintenanceLevel": "moderate",
       "spaceRequirement": "needs-clearance",
-      "description": "The Eliza series is Ozone's flagship frameless swing shower enclosure...",
-      "ozoneUrl": "https://www.ozone.in/eliza",
-      "catalogUrl": "https://www.ozone.in/catalogue"
+      "description": "The Eliza series is Smart Shower's flagship frameless swing shower enclosure...",
+      "productUrl": "https://www.smartshower.ai/eliza",
+      "catalogUrl": "https://www.smartshower.ai/catalogue"
     }
   ],
   "summary": "User has a large 8x6 master bathroom, wants luxury frameless enclosure, budget around 2 lakh."

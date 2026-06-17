@@ -42,17 +42,17 @@ export const BudgetEstimate = ({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="overflow-hidden rounded-xl border border-[var(--ozone-border)] bg-white shadow-sm"
+      className="overflow-hidden rounded-xl border border-[var(--brand-border)] bg-white shadow-sm"
     >
-      <div className="border-b border-[var(--ozone-border)] bg-[var(--ozone-bg-blue-gray)] px-4 py-2.5">
+      <div className="border-b border-[var(--brand-border)] bg-[var(--brand-bg-blue-gray)] px-4 py-2.5">
         <div className="flex items-center gap-2">
-          <IndianRupee className="h-4 w-4 text-[var(--ozone-primary)]" />
-          <h4 className="text-sm font-bold text-[var(--ozone-primary)]">
+          <IndianRupee className="h-4 w-4 text-[var(--brand-primary)]" />
+          <h4 className="text-sm font-bold text-[var(--brand-primary)]">
             Budget Estimate
           </h4>
         </div>
         {bathroomSize && (
-          <p className="mt-0.5 text-xs text-[var(--ozone-text-secondary)]">
+          <p className="mt-0.5 text-xs text-[var(--brand-text-secondary)]">
             For a {bathroomSize} bathroom
           </p>
         )}
@@ -61,8 +61,8 @@ export const BudgetEstimate = ({
       <div className="px-4 py-3 space-y-2">
         {/* Enclosure */}
         <div className="flex items-center justify-between text-sm">
-          <span className="text-[var(--ozone-text)]">{enclosure.name}</span>
-          <span className="font-semibold text-[var(--ozone-primary)]">
+          <span className="text-[var(--brand-text)]">{enclosure.name}</span>
+          <span className="font-semibold text-[var(--brand-primary)]">
             {tierRange[enclosure.priceTier]}
           </span>
         </div>
@@ -73,10 +73,10 @@ export const BudgetEstimate = ({
             key={fitting!.id}
             className="flex items-center justify-between text-sm"
           >
-            <span className="text-[var(--ozone-text-secondary)]">
+            <span className="text-[var(--brand-text-secondary)]">
               {fitting!.name}
             </span>
-            <span className="text-[var(--ozone-text)]">
+            <span className="text-[var(--brand-text)]">
               {fittingTierRange[fitting!.tier]}
             </span>
           </div>
@@ -84,19 +84,19 @@ export const BudgetEstimate = ({
 
         {/* Installation */}
         <div className="flex items-center justify-between text-sm">
-          <span className="text-[var(--ozone-text-secondary)]">
+          <span className="text-[var(--brand-text-secondary)]">
             Installation (estimated)
           </span>
-          <span className="text-[var(--ozone-text)]">₹3,000 – ₹8,000</span>
+          <span className="text-[var(--brand-text)]">₹3,000 – ₹8,000</span>
         </div>
 
-        <div className="my-2 border-t border-dashed border-[var(--ozone-border)]" />
+        <div className="my-2 border-t border-dashed border-[var(--brand-border)]" />
 
-        <div className="flex items-center gap-1.5 rounded-lg bg-[var(--ozone-bg-light)] px-3 py-2 text-xs text-[var(--ozone-text-secondary)]">
-          <Info className="h-3.5 w-3.5 shrink-0 text-[var(--ozone-primary)]" />
+        <div className="flex items-center gap-1.5 rounded-lg bg-[var(--brand-bg-light)] px-3 py-2 text-xs text-[var(--brand-text-secondary)]">
+          <Info className="h-3.5 w-3.5 shrink-0 text-[var(--brand-primary)]" />
           <span>
-            These are approximate ranges. For exact pricing, book a free &quot;O
-            Wala&quot; consultation with Ozone&apos;s team.
+            These are approximate ranges. For exact pricing, book a free
+            consultation with our team.
           </span>
         </div>
       </div>

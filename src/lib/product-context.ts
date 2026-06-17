@@ -17,7 +17,7 @@ export function buildProductContext(): string {
     .join("\n");
 
   return `
-## OZONE SHOWER ENCLOSURE CATALOG (use these exact IDs when calling tools)
+## SHOWER ENCLOSURE CATALOG (use these exact IDs when calling tools)
 
 ### Enclosure Systems:
 ${enclosureContext}

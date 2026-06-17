@@ -37,12 +37,12 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="overflow-hidden rounded-xl border border-[var(--ozone-border)] bg-white shadow-sm"
+      className="overflow-hidden rounded-xl border border-[var(--brand-border)] bg-white shadow-sm"
     >
       {/* Header */}
-      <div className="border-b border-[var(--ozone-border)] bg-[var(--ozone-bg-blue-gray)] px-4 py-3">
+      <div className="border-b border-[var(--brand-border)] bg-[var(--brand-bg-blue-gray)] px-4 py-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-lg font-bold text-[var(--ozone-primary)]">
+          <h4 className="text-lg font-bold text-[var(--brand-primary)]">
             {enclosure.name}
           </h4>
           <Badge
@@ -67,14 +67,14 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
 
       {/* Body */}
       <div className="px-4 py-3 space-y-3">
-        <p className="text-sm text-[var(--ozone-text-secondary)] leading-relaxed">
+        <p className="text-sm text-[var(--brand-text-secondary)] leading-relaxed">
           {enclosure.description}
         </p>
 
         {/* Key specs */}
         <div className="grid grid-cols-2 gap-2 text-xs">
-          <div className="flex items-center gap-1.5 text-[var(--ozone-text-secondary)]">
-            <Layers className="h-3.5 w-3.5 text-[var(--ozone-primary)]" />
+          <div className="flex items-center gap-1.5 text-[var(--brand-text-secondary)]">
+            <Layers className="h-3.5 w-3.5 text-[var(--brand-primary)]" />
             <span>
               {enclosure.layouts
                 .map((l) =>
@@ -89,13 +89,13 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
                 .join(", ")}
             </span>
           </div>
-          <div className="flex items-center gap-1.5 text-[var(--ozone-text-secondary)]">
-            <Palette className="h-3.5 w-3.5 text-[var(--ozone-primary)]" />
+          <div className="flex items-center gap-1.5 text-[var(--brand-text-secondary)]">
+            <Palette className="h-3.5 w-3.5 text-[var(--brand-primary)]" />
             <span>{enclosure.colors.join(", ")}</span>
           </div>
           {enclosure.specifications["maxHeight"] && (
-            <div className="flex items-center gap-1.5 text-[var(--ozone-text-secondary)]">
-              <Maximize2 className="h-3.5 w-3.5 text-[var(--ozone-primary)]" />
+            <div className="flex items-center gap-1.5 text-[var(--brand-text-secondary)]">
+              <Maximize2 className="h-3.5 w-3.5 text-[var(--brand-primary)]" />
               <span>Max height: {enclosure.specifications["maxHeight"]}</span>
             </div>
           )}
@@ -106,7 +106,7 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
           {enclosure.features.slice(0, 4).map((feature) => (
             <span
               key={feature}
-              className="rounded-md bg-[var(--ozone-bg-light)] px-2 py-1 text-xs text-[var(--ozone-text-secondary)]"
+              className="rounded-md bg-[var(--brand-bg-light)] px-2 py-1 text-xs text-[var(--brand-text-secondary)]"
             >
               {feature}
             </span>
@@ -114,8 +114,8 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
         </div>
 
         {/* Ideal for */}
-        <p className="text-xs text-[var(--ozone-text-secondary)]">
-          <span className="font-semibold text-[var(--ozone-primary)]">
+        <p className="text-xs text-[var(--brand-text-secondary)]">
+          <span className="font-semibold text-[var(--brand-primary)]">
             Ideal for:
           </span>{" "}
           {enclosure.idealFor.join(" · ")}
@@ -123,16 +123,16 @@ export const EnclosureCard = ({ enclosureId }: EnclosureCardProps) => {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-[var(--ozone-border)] px-4 py-2.5">
+      <div className="border-t border-[var(--brand-border)] px-4 py-2.5">
         <a
-          href={enclosure.ozoneUrl}
+          href={enclosure.productUrl || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--ozone-accent)] transition-colors hover:text-[var(--ozone-primary)]"
-          aria-label={`View ${enclosure.name} on ozone.in`}
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--brand-accent)] transition-colors hover:text-[var(--brand-primary)]"
+          aria-label={`View ${enclosure.name}`}
           tabIndex={0}
         >
-          View on ozone.in
+          View Details
           <ExternalLink className="h-3 w-3" />
         </a>
       </div>
