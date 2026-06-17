@@ -9,7 +9,7 @@ The Ozone Shower Advisor API provides an AI-powered conversational interface for
 **Base URL:**
 
 ```
-https://ozone-chat-backend-internal.vercel.app
+https://stamper-ai-backend.vercel.app
 ```
 
 For local development:
@@ -63,10 +63,10 @@ Send a conversation and receive the AI advisor's response as JSON.
 
 ### Message Object
 
-| Field     | Type                | Required | Description                                          |
-| --------- | ------------------- | -------- | ---------------------------------------------------- |
-| `role`    | string              | Yes      | `"user"` or `"assistant"`                            |
-| `content` | string \| array     | Yes      | Text string or array of content parts (see below).   |
+| Field     | Type     | Required | Description               |                                                    |
+| -----------| ----------| ----------| ---------------------------| ----------------------------------------------------|
+| `role`    | string   | Yes      | `"user"` or `"assistant"` |                                                    |
+| `content` | string \ | array    | Yes                       | Text string or array of content parts (see below). |
 
 The `content` field accepts either:
 
@@ -325,7 +325,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 ### cURL — Text Only
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-ai.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -338,7 +338,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### cURL — With Image
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-ai.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -357,7 +357,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### cURL — With PDF
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-ai.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -376,7 +376,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### JavaScript (fetch)
 
 ```javascript
-const response = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+const response = await fetch("https://stamper-ai.vercel.app/api/v1/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -402,7 +402,7 @@ console.log(data.usage);            // Token usage
 ### JavaScript — With Image
 
 ```javascript
-const response = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+const response = await fetch("https://stamper-ai.vercel.app/api/v1/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -429,7 +429,7 @@ const data = await response.json();
 import requests
 
 response = requests.post(
-    "https://ozone-chat-backend-internal.vercel.app/api/v1/chat",
+    "https://stamper-ai.vercel.app/api/v1/chat",
     json={
         "messages": [
             {"role": "user", "content": "Show me frameless shower options"}
@@ -476,7 +476,7 @@ const turn3 = await chat(messages);
 // turn3.summary = "User wants frameless enclosure for 8x6ft master bath, budget under 2 lakh..."
 
 async function chat(messages) {
-  const res = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+  const res = await fetch("https://stamper-ai.vercel.app/api/v1/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ messages, persona: "homeowner" }),
