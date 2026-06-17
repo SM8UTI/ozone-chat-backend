@@ -2,47 +2,47 @@
 
 import { motion } from "framer-motion";
 import { PersonaCard } from "@/components/landing/PersonaCard";
-import { Droplets, MapPin, Phone } from "lucide-react";
+import { FileText, MapPin, Phone } from "lucide-react";
 
 const PERSONAS = [
   {
     persona: "homeowner" as const,
     title: "I'm a Homeowner",
-    subtitle: "Personal bathroom project",
+    subtitle: "Personal interiors project",
     description:
-      "Get friendly, jargon-free advice on the perfect shower enclosure for your bathroom. I'll help you choose the right style, size, and budget.",
+      "Get an expert, independent review of your interior quotation. I'll tell you if the pricing is fair and give you the exact words to negotiate it down.",
     starters: [
-      "I'm renovating my bathroom and need a shower enclosure",
-      "I have a small bathroom, what are my options?",
-      "Help me pick a shower under 30K",
+      "I just got a quote for my 3BHK interiors",
+      "Is 30L a fair price for a full home interior?",
+      "Can you review this modular kitchen quotation?",
     ],
     href: "/chat/homeowner",
     icon: "home" as const,
   },
   {
     persona: "architect" as const,
-    title: "I'm an Architect",
-    subtitle: "Professional project specification",
+    title: "I'm a Designer",
+    subtitle: "Professional quotation review",
     description:
-      "Get spec-driven product recommendations with technical details, material specs, and project-level guidance for your designs.",
+      "Check if your contractor quotes are competitive. Ensure your clients are getting fair market rates on materials and execution.",
     starters: [
-      "I'm specifying showers for a 50-unit residential project",
-      "Need frameless options for a luxury villa bathroom",
-      "Compare specifications and options",
+      "Review this civil work contractor quote",
+      "Are these carpentry rates standard for Mumbai?",
+      "Check this modular vendor quotation",
     ],
     href: "/chat/architect",
     icon: "ruler" as const,
   },
   {
     persona: "dealer" as const,
-    title: "I'm a Dealer",
-    subtitle: "Customer qualification assistant",
+    title: "I'm a Contractor",
+    subtitle: "Quote structuring assistant",
     description:
-      "Qualify walk-in customers quickly with guided discovery questions. Get product recommendations and talking points to close the sale.",
+      "Ensure your quotes are clear, competitive, and less likely to be negotiated down by clearly justifying premium materials.",
     starters: [
-      "A customer walked in looking for a shower partition",
-      "Customer wants to replace their old shower enclosure",
-      "Help me recommend a premium shower for a large bathroom",
+      "Review my 2BHK interior quotation",
+      "How can I justify these premium plywood costs?",
+      "Help me structure this civil and plumbing quote",
     ],
     href: "/chat/dealer",
     icon: "store" as const,
@@ -64,7 +64,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <span className="text-3xl font-bold tracking-tight">SmartShower</span>
+            <span className="text-3xl font-bold tracking-tight">Stamper</span>
           </motion.div>
 
           <motion.div
@@ -73,8 +73,8 @@ export default function LandingPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur-sm">
-              <Droplets className="h-4 w-4" />
-              AI-Powered Shower Advisor
+              <FileText className="h-4 w-4" />
+              AI-Powered Quotation Advisor
             </div>
           </motion.div>
 
@@ -84,9 +84,9 @@ export default function LandingPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-6 text-4xl font-bold leading-tight md:text-6xl"
           >
-            Find Your Perfect
+            Is Your Interiors Quote
             <br />
-            <span className="text-[#E6ECF2]">Glass Shower Enclosure</span>
+            <span className="text-[#E6ECF2]">Actually Fair?</span>
           </motion.h1>
 
           <motion.p
@@ -95,9 +95,9 @@ export default function LandingPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/80"
           >
-            Tell us about your space and preferences. Our AI advisor will
-            recommend the ideal shower enclosure, fittings, and
-            accessories — personalized just for you.
+            Upload your interiors quotation. Our AI advisor will analyze
+            every line item, tell you exactly where you're overpaying,
+            and give you the script to negotiate it down.
           </motion.p>
 
           {/* Persona Cards */}
@@ -113,9 +113,9 @@ export default function LandingPage() {
       <footer className="bg-[var(--brand-primary)] px-4 py-8 text-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-4">
-            <span className="text-lg font-bold">SmartShower</span>
+            <span className="text-lg font-bold">Stamper</span>
             <span className="text-sm text-white/70">
-              Your AI Bathroom Guide
+              Your Interior Quotation Expert
             </span>
           </div>
           <div className="flex items-center gap-6 text-sm text-white/70">
@@ -124,7 +124,7 @@ export default function LandingPage() {
               Support
             </span>
             <span className="text-white/70">
-              smartshower.ai
+              stamperlabs@gmail.com
             </span>
           </div>
         </div>

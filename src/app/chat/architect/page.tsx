@@ -1,17 +1,16 @@
 import { ChatShell } from "@/components/chat/ChatShell";
 
 const SUGGESTED_STARTERS = [
-  "I'm specifying showers for a 50-unit residential project",
-  "Need frameless options for a luxury villa bathroom",
-  "Compare Stealth vs Outliner series specs",
-  "What finishes are available across all series?",
+  "Review this civil work contractor quote",
+  "Are these carpentry rates standard for Mumbai?",
+  "Check this modular vendor quotation",
 ];
 
 export default function ArchitectChatPage() {
   return (
     <ChatShell
       persona="architect"
-      title="Product Consultant"
+      title="Designer Quote Assistant"
       suggestedStarters={SUGGESTED_STARTERS}
     />
   );

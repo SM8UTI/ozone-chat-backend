@@ -4,22 +4,9 @@ import { openrouter } from "@/lib/model";
 import { chatTools } from "@/lib/tools";
 import { buildProductContext } from "@/lib/product-context";
 import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt, internalTeamSystemPrompt } from "@/data/prompts";
-import { enclosures } from "@/data/enclosures";
-import { fittings } from "@/data/fittings";
-import type { AnswerType, Enclosure, Fitting, Persona, Question } from "@/types";
-
-const RECOMMENDATION_TOOLS = new Set([
-  "show_enclosures",
-  "show_fittings",
-  "show_complete_solution",
-  "compare_products",
-  "budget_estimate",
-]);
+import type { AnswerType, Persona, Question } from "@/types";
 
 function inferAnswerType(reply: string, toolNames: string[]): AnswerType {
-  if (toolNames.some((t) => RECOMMENDATION_TOOLS.has(t))) {
-    return "recommendation";
-  }
 
   const lines = reply.split("\n").filter((l) => l.trim());
   const hasNumberedOptions = lines.some((l) => /^\s*[\d]+[.)]\s/.test(l));
@@ -50,78 +37,6 @@ function buildQuestion(classifyOutput: ClassifyOutput | undefined): Question | u
   };
 }
 
-function buildRecommendations(
-  toolResults: { tool: string; input: Record<string, unknown>; result: unknown }[]
-): (Enclosure | Fitting)[] {
-  const recommendations: (Enclosure | Fitting)[] = [];
-  const seenIds = new Set<string>();
-
-  for (const tr of toolResults) {
-    if (tr.tool === "show_enclosures" || tr.tool === "compare_products") {
-      const ids = (tr.input as { enclosureIds: string[] }).enclosureIds;
-      for (const id of ids) {
-        if (seenIds.has(id)) continue;
-        const enclosure = enclosures.find((e) => e.id === id);
-        if (enclosure) {
-          recommendations.push(enclosure);
-          seenIds.add(id);
-        }
-      }
-    }
-
-    if (tr.tool === "show_fittings") {
-      const ids = (tr.input as { fittingIds: string[] }).fittingIds;
-      for (const id of ids) {
-        if (seenIds.has(id)) continue;
-        const fitting = fittings.find((f) => f.id === id);
-        if (fitting) {
-          recommendations.push(fitting);
-          seenIds.add(id);
-        }
-      }
-    }
-
-    if (tr.tool === "show_complete_solution") {
-      const input = tr.input as { enclosureId: string; fittingIds: string[] };
-      if (!seenIds.has(input.enclosureId)) {
-        const enclosure = enclosures.find((e) => e.id === input.enclosureId);
-        if (enclosure) {
-          recommendations.push(enclosure);
-          seenIds.add(input.enclosureId);
-        }
-      }
-      for (const id of input.fittingIds) {
-        if (seenIds.has(id)) continue;
-        const fitting = fittings.find((f) => f.id === id);
-        if (fitting) {
-          recommendations.push(fitting);
-          seenIds.add(id);
-        }
-      }
-    }
-
-    if (tr.tool === "budget_estimate") {
-      const input = tr.input as { enclosureId: string; fittingIds: string[] };
-      if (!seenIds.has(input.enclosureId)) {
-        const enclosure = enclosures.find((e) => e.id === input.enclosureId);
-        if (enclosure) {
-          recommendations.push(enclosure);
-          seenIds.add(input.enclosureId);
-        }
-      }
-      for (const id of input.fittingIds) {
-        if (seenIds.has(id)) continue;
-        const fitting = fittings.find((f) => f.id === id);
-        if (fitting) {
-          recommendations.push(fitting);
-          seenIds.add(id);
-        }
-      }
-    }
-  }
-
-  return recommendations;
-}
 
 interface ContentPart {
   type: "text" | "image" | "file";
@@ -267,11 +182,6 @@ export async function POST(req: Request) {
       if (question) {
         response.question = question;
       }
-    }
-
-    const recommendations = buildRecommendations(toolResults);
-    if (recommendations.length > 0) {
-      response.recommendations = recommendations;
     }
 
     if (classifyOutput?.conversationSummary) {

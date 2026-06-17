@@ -8,15 +8,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Shower Advisor | Find Your Perfect Shower Enclosure",
+  title: "Stamper | Is Your Interiors Quote Actually Fair?",
   description:
-    "AI-powered shower advisor. Get personalized recommendations for glass shower enclosures, fittings, and accessories.",
+    "AI-powered quotation advisor. Get expert, independent review of your interior quotation and learn how to negotiate it down.",
   openGraph: {
-    title: "Smart Shower Advisor",
+    title: "Stamper",
     description:
-      "Find your perfect glass shower enclosure with AI-powered recommendations.",
+      "Get expert, independent review of your interior quotation and learn how to negotiate it down.",
     images: [],
-    siteName: "Smart Shower Advisor",
+    siteName: "Stamper",
   },
 };
 
