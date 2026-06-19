@@ -8,15 +8,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ozone | Find Your Perfect Shower Enclosure",
+  title: "Stamper | Find Your Perfect Shower Enclosure",
   description:
-    "AI-powered shower advisor by Ozone India. Get personalized recommendations for glass shower enclosures, fittings, and accessories.",
+    "AI-powered shower advisor by Stamper India. Get personalized recommendations for glass shower enclosures, fittings, and accessories.",
   openGraph: {
-    title: "Ozone Shower Advisor",
+    title: "Stamper Shower Advisor",
     description:
-      "Find your perfect glass shower enclosure with AI-powered recommendations from Ozone India.",
-    images: ["https://www.ozone.in/files/Images/logo.png"],
-    siteName: "Ozone Overseas Pvt. Ltd",
+      "Find your perfect glass shower enclosure with AI-powered recommendations from Stamper India.",
+    images: ["https://www.stamper.in/files/Images/logo.png"],
+    siteName: "Stamper Overseas Pvt. Ltd",
   },
 };
 

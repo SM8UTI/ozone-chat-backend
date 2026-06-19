@@ -98,7 +98,7 @@ export const chatTools = {
 
   book_consultation: tool({
     description:
-      "Show a consultation booking CTA with contact options. Use when the user wants to book a consultation, get exact pricing, or connect with Ozone's team.",
+      "Show a consultation booking CTA with contact options. Use when the user wants to book a consultation, get exact pricing, or connect with Stamper's team.",
     inputSchema: z.object({
       productInterest: z
         .string()

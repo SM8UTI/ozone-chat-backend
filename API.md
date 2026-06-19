@@ -1,15 +1,15 @@
-# Ozone Shower Advisor 
+# Stamper Shower Advisor 
 
 ## Overview
 
 
 
-The Ozone Shower Advisor API provides an AI-powered conversational interface for recommending glass shower enclosures, fittings, and accessories from [Ozone India](https://www.ozone.in). The API accepts a conversation history (with optional image/PDF attachments) and returns the assistant's reply along with structured data including product recommendations, question options, and conversation summaries.
+The Stamper Shower Advisor API provides an AI-powered conversational interface for recommending glass shower enclosures, fittings, and accessories from [Stamper India](https://www.stamper.in). The API accepts a conversation history (with optional image/PDF attachments) and returns the assistant's reply along with structured data including product recommendations, question options, and conversation summaries.
 
 **Base URL:**
 
 ```
-https://ozone-chat-backend-internal.vercel.app
+https://stamper-chat-backend-internal.vercel.app
 ```
 
 For local development:
@@ -154,7 +154,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 | `maintenanceLevel`  | string            | `"easy"` or `"moderate"`.                        |
 | `spaceRequirement`  | string            | `"space-saving"`, `"needs-clearance"`, or `"flexible"`. |
 | `description`       | string            | Full product description.                        |
-| `ozoneUrl`          | string            | Product page URL.                                |
+| `stamperUrl`          | string            | Product page URL.                                |
 | `catalogUrl`        | string            | Catalog page URL.                                |
 
 **Fitting object:**
@@ -168,7 +168,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 | `compatibleWith` | string[] | Compatible enclosure IDs.                |
 | `colors`         | string[] | Available colors/finishes.               |
 | `description`    | string   | Product description.                     |
-| `ozoneUrl`       | string   | Product page URL.                        |
+| `stamperUrl`       | string   | Product page URL.                        |
 
 ### Usage Object
 
@@ -268,9 +268,9 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
       "idealFor": ["Luxury bathrooms", "Master suites", "..."],
       "maintenanceLevel": "moderate",
       "spaceRequirement": "needs-clearance",
-      "description": "The Eliza series is Ozone's flagship frameless swing shower enclosure...",
-      "ozoneUrl": "https://www.ozone.in/eliza",
-      "catalogUrl": "https://www.ozone.in/catalogue"
+      "description": "The Eliza series is Stamper's flagship frameless swing shower enclosure...",
+      "stamperUrl": "https://www.stamper.in/eliza",
+      "catalogUrl": "https://www.stamper.in/catalogue"
     }
   ],
   "summary": "User has a large 8x6 master bathroom, wants luxury frameless enclosure, budget around 2 lakh."
@@ -325,7 +325,7 @@ Present when the AI invoked product tools (`show_enclosures`, `show_fittings`, `
 ### cURL — Text Only
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-chat-backend-internal.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -338,7 +338,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### cURL — With Image
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-chat-backend-internal.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -357,7 +357,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### cURL — With PDF
 
 ```bash
-curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
+curl -X POST https://stamper-chat-backend-internal.vercel.app/api/v1/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -376,7 +376,7 @@ curl -X POST https://ozone-chat-backend-internal.vercel.app/api/v1/chat \
 ### JavaScript (fetch)
 
 ```javascript
-const response = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+const response = await fetch("https://stamper-chat-backend-internal.vercel.app/api/v1/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -402,7 +402,7 @@ console.log(data.usage);            // Token usage
 ### JavaScript — With Image
 
 ```javascript
-const response = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+const response = await fetch("https://stamper-chat-backend-internal.vercel.app/api/v1/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -429,7 +429,7 @@ const data = await response.json();
 import requests
 
 response = requests.post(
-    "https://ozone-chat-backend-internal.vercel.app/api/v1/chat",
+    "https://stamper-chat-backend-internal.vercel.app/api/v1/chat",
     json={
         "messages": [
             {"role": "user", "content": "Show me frameless shower options"}
@@ -476,7 +476,7 @@ const turn3 = await chat(messages);
 // turn3.summary = "User wants frameless enclosure for 8x6ft master bath, budget under 2 lakh..."
 
 async function chat(messages) {
-  const res = await fetch("https://ozone-chat-backend-internal.vercel.app/api/v1/chat", {
+  const res = await fetch("https://stamper-chat-backend-internal.vercel.app/api/v1/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ messages, persona: "homeowner" }),

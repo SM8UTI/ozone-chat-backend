@@ -30,7 +30,7 @@ export interface Enclosure {
   maintenanceLevel: MaintenanceLevel;
   spaceRequirement: SpaceRequirement;
   description: string;
-  ozoneUrl: string;
+  stamperUrl: string;
   catalogUrl: string;
 }
 
@@ -52,7 +52,7 @@ export interface Fitting {
   compatibleWith: string[];
   colors: string[];
   description: string;
-  ozoneUrl: string;
+  stamperUrl: string;
 }
 
 // Chat / AI types

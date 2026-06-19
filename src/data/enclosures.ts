@@ -44,9 +44,9 @@ export const enclosures: Enclosure[] = [
     maintenanceLevel: "moderate",
     spaceRequirement: "needs-clearance",
     description:
-      "The Eliza series is Ozone's flagship frameless swing shower enclosure, crafted from SS 304 stainless steel and brass for unmatched durability and sophistication. With 5 layout configurations including Linear 180°, Corner 90°, 135°, and T-Type, it adapts to virtually any luxury bathroom design. The frameless construction provides an uninterrupted glass surface for a truly premium look.",
-    ozoneUrl: "https://www.ozone.in/eliza",
-    catalogUrl: "https://www.ozone.in/catalogue",
+      "The Eliza series is Stamper's flagship frameless swing shower enclosure, crafted from SS 304 stainless steel and brass for unmatched durability and sophistication. With 5 layout configurations including Linear 180°, Corner 90°, 135°, and T-Type, it adapts to virtually any luxury bathroom design. The frameless construction provides an uninterrupted glass surface for a truly premium look.",
+    stamperUrl: "https://www.stamper.in/eliza",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "alura",
@@ -94,8 +94,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Alura series delivers frameless elegance with the strength of SS 304 stainless steel. Available in 3 layout configurations — Linear 180°, Corner 90°, and 135° — it's designed for modern bathrooms that demand clean aesthetics without compromising on quality. The frameless swing door provides a spacious, open feel.",
-    ozoneUrl: "https://www.ozone.in/alura",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/alura",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Frameless Sliding ──────────────────────────────────────────────
@@ -152,8 +152,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Eliza SL brings the luxury of the Eliza series into a space-saving sliding format. Featuring a soft-close mechanism for whisper-quiet operation and available in 4 premium finishes — Polished Stainless Steel, Black Matt, CP, and Antique Brass — it delivers frameless sophistication without requiring door swing clearance.",
-    ozoneUrl: "https://www.ozone.in/eliza-sl",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/eliza-sl",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Frameless Slide-Fold ───────────────────────────────────────────
@@ -206,8 +206,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Lumina-33 is a frameless slide-fold enclosure designed specifically for 90-degree corner installations. Its innovative fold-away mechanism maximizes usable bathroom space while the Black Matt finish adds a contemporary edge. Perfect for those who refuse to compromise on frameless aesthetics even in compact spaces.",
-    ozoneUrl: "https://www.ozone.in/lumina-33",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/lumina-33",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Semi-Framed Swing ─────────────────────────────────────────────
@@ -260,8 +260,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Cascade series is engineered for urban compact bathrooms, combining the visual lightness of semi-framed construction with the reliability of SS 304 stainless steel. Available in Linear 180°, Corner 90°, and C-Type configurations with Gun Grey and Polished Stainless Steel finishes, it's the ideal choice for city apartments.",
-    ozoneUrl: "https://www.ozone.in/cascade",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/cascade",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "zen",
@@ -312,8 +312,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Zen series strikes the perfect balance between style and structural support. Its semi-framed SS 304 construction offers more stability than frameless options while maintaining a sleek, modern appearance. With Linear 180°, Corner 90°, and C-Type configurations, it adapts to diverse bathroom layouts.",
-    ozoneUrl: "https://www.ozone.in/zen",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/zen",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Semi-Framed Sliding ────────────────────────────────────────────
@@ -366,8 +366,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Eazy series delivers smooth sliding functionality in a semi-framed package. Available in Corner 90° and Linear 180° configurations with Black Matt and CP finishes, it's designed for bathrooms where space is at a premium but style isn't negotiable.",
-    ozoneUrl: "https://www.ozone.in/eazy",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/eazy",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "coral",
@@ -418,8 +418,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Coral series features a distinctive curved sliding door design, making it a true statement piece for corner installations. Available in Polished Stainless Steel, Black Matt, and Gold finishes, it transforms an ordinary corner into an elegant shower space with its smooth curved track and premium SS 304 construction.",
-    ozoneUrl: "https://www.ozone.in/coral",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/coral",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Semi-Framed Slide-Fold ─────────────────────────────────────────
@@ -472,8 +472,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Lumina-11 is a semi-framed slide-fold enclosure that combines sliding and folding mechanisms for ultimate space efficiency. Built with SS 304 stainless steel, it folds neatly to one side when open, making it ideal for small bathrooms where every inch counts.",
-    ozoneUrl: "https://www.ozone.in/lumina-11",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/lumina-11",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "lumina-22",
@@ -524,8 +524,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Lumina-22 builds on the Lumina-11's space-saving slide-fold concept with enhanced stability and a sleeker profile. Its SS 304 construction provides robust support while the refined folding mechanism operates smoothly. A strong choice for those who want practicality without sacrificing style.",
-    ozoneUrl: "https://www.ozone.in/lumina-22",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/lumina-22",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Framed Swing ──────────────────────────────────────────────────
@@ -564,7 +564,7 @@ export const enclosures: Enclosure[] = [
         "180° WTG Single Door, 90° GTG 90° Hinge, 90° GTG 180° Hinge, 180° GTG 180° Hinge, 180° WTG",
     },
     usps: [
-      "Most budget-friendly enclosure in the Ozone range",
+      "Most budget-friendly enclosure in the Stamper range",
       "Magnetic closure for secure yet easy operation",
       "5 versatile door configurations",
       "Slim aluminium profile for minimal visual weight",
@@ -585,9 +585,9 @@ export const enclosures: Enclosure[] = [
     maintenanceLevel: "easy",
     spaceRequirement: "needs-clearance",
     description:
-      "The Outliner series offers budget-friendly shower enclosures with a slim aluminium profile and magnetic closure system. With 5 door configurations including WTG (wall-to-glass) and GTG (glass-to-glass) options, it's highly customizable while remaining the most accessible entry point in Ozone's shower enclosure range.",
-    ozoneUrl: "https://www.ozone.in/outliner",
-    catalogUrl: "https://www.ozone.in/catalogue",
+      "The Outliner series offers budget-friendly shower enclosures with a slim aluminium profile and magnetic closure system. With 5 door configurations including WTG (wall-to-glass) and GTG (glass-to-glass) options, it's highly customizable while remaining the most accessible entry point in Stamper's shower enclosure range.",
+    stamperUrl: "https://www.stamper.in/outliner",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "aster",
@@ -639,8 +639,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Aster series is a classic framed shower enclosure built with sturdy aluminium, supporting heights up to 2.7m — making it ideal for bathrooms with high ceilings. Available in Linear 180°, Corner 90°, and T-Type configurations with Gun Grey and Polished Stainless Steel finishes, it delivers dependable performance for residential and commercial use.",
-    ozoneUrl: "https://www.ozone.in/aster",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/aster",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "grace",
@@ -701,8 +701,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Grace series offers elegant framed shower enclosures with the convenience of 6 pre-defined sizes, making specification and ordering straightforward. With heights up to 2.4m and 3 layout options, it combines practical sizing with refined aluminium craftsmanship at a budget-friendly price point.",
-    ozoneUrl: "https://www.ozone.in/grace",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/grace",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
   {
     id: "ray",
@@ -752,8 +752,8 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "needs-clearance",
     description:
       "The Ray series brings designer style to framed enclosures with its Black Matt and Brushed Gold finishes — a rarity in the framed category. With 4 layout configurations including the versatile 135° option, it proves that framed enclosures can be just as stylish as their frameless counterparts.",
-    ozoneUrl: "https://www.ozone.in/ray",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/ray",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 
   // ─── Framed Sliding ─────────────────────────────────────────────────
@@ -819,7 +819,7 @@ export const enclosures: Enclosure[] = [
     spaceRequirement: "space-saving",
     description:
       "The Stealth series redefines framed sliding enclosures with its ultra-slim 7mm visible profile — the slimmest in its class. Ceiling-mounted with no bottom track, it creates a seamless floor transition while supporting panels up to 3m tall and 120kg. The soft open/close mechanism and 300,000-cycle tested durability make it perfect for residential luxury and high-traffic hospitality projects alike.",
-    ozoneUrl: "https://www.ozone.in/stealth",
-    catalogUrl: "https://www.ozone.in/catalogue",
+    stamperUrl: "https://www.stamper.in/stealth",
+    catalogUrl: "https://www.stamper.in/catalogue",
   },
 ];

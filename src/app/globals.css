@@ -82,14 +82,14 @@
   --sidebar-border: #CBCBCB;
   --sidebar-ring: #1F4E8C;
 
-  --ozone-primary: #00407F;
-  --ozone-dark: #003B82;
-  --ozone-accent: #1F4E8C;
-  --ozone-bg-light: #F0F1F1;
-  --ozone-bg-blue-gray: #E6ECF2;
-  --ozone-text: #333333;
-  --ozone-text-secondary: #6F6969;
-  --ozone-border: #CBCBCB;
+  --stamper-primary: #00407F;
+  --stamper-dark: #003B82;
+  --stamper-accent: #1F4E8C;
+  --stamper-bg-light: #F0F1F1;
+  --stamper-bg-blue-gray: #E6ECF2;
+  --stamper-text: #333333;
+  --stamper-text-secondary: #6F6969;
+  --stamper-border: #CBCBCB;
 }
 
 .dark {
