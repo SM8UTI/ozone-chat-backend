@@ -8,15 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stamper | Is Your Interiors Quote Actually Fair?",
-  description:
-    "AI-powered quotation advisor. Get expert, independent review of your interior quotation and learn how to negotiate it down.",
-  openGraph: {
-    title: "Stamper",
-    description:
-      "Get expert, independent review of your interior quotation and learn how to negotiate it down.",
-    images: [],
-    siteName: "Stamper",
+  title: "Stamper",
+  description: "Stamper API",
+  icons: {
+    icon: "/Stamer2.png",
   },
 };
 
