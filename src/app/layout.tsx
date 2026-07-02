@@ -8,10 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stamper",
-  description: "Stamper API",
+  title: "Nanee AI",
+  description: "Nanee AI API",
   icons: {
-    icon: "/Stamer2.png",
+    icon: "/logo.png",
   },
 };
 
