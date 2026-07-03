@@ -25,3 +25,15 @@ export interface ToolInvocation {
   args: Record<string, unknown>;
   result?: unknown;
 }
+
+export interface Enclosure {
+  id: string;
+  name: string;
+  [key: string]: any;
+}
+
+export interface Fitting {
+  id: string;
+  name: string;
+  [key: string]: any;
+}

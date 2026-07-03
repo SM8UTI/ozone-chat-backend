@@ -2,8 +2,7 @@ import { generateText, stepCountIs } from "ai";
 import { NextResponse } from "next/server";
 import { openrouter } from "@/lib/model";
 import { chatTools } from "@/lib/tools";
-import { buildProductContext } from "@/lib/product-context";
-import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt, internalTeamSystemPrompt } from "@/data/prompts";
+import { IdeaSystemPrompt } from "@/data/prompts";
 import type { AnswerType, Persona, Question } from "@/types";
 
 function inferAnswerType(reply: string, toolNames: string[]): AnswerType {
@@ -122,20 +121,13 @@ export async function POST(req: Request) {
 
     const { messages, persona } = body;
 
-    const systemPrompt =
-      persona === "architect"
-        ? architectSystemPrompt
-        : persona === "dealer"
-          ? dealerSystemPrompt
-          : persona === "internal_team"
-            ? internalTeamSystemPrompt
-            : homeownerSystemPrompt;
+    const systemPrompt = IdeaSystemPrompt;
 
     const modelId = hasMultimodalContent(messages) ? VISION_MODEL : TEXT_MODEL;
 
     const result = await generateText({
       model: openrouter(modelId),
-      system: `${systemPrompt}\n\n${buildProductContext()}`,
+      system: systemPrompt,
       messages: messages.map((m) =>
         m.role === "user"
           ? { role: "user" as const, content: toAIContent(m.content) }

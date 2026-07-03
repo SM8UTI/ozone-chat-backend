@@ -1,8 +1,7 @@
 import { streamText, convertToModelMessages, stepCountIs, type UIMessage } from "ai";
 import { openrouter } from "@/lib/model";
 import { chatTools } from "@/lib/tools";
-import { buildProductContext } from "@/lib/product-context";
-import { homeownerSystemPrompt, architectSystemPrompt, dealerSystemPrompt, internalTeamSystemPrompt } from "@/data/prompts";
+import { IdeaSystemPrompt } from "@/data/prompts";
 import type { Persona } from "@/types";
 
 export async function POST(req: Request) {
@@ -11,20 +10,13 @@ export async function POST(req: Request) {
     persona: Persona;
   };
 
-  const systemPrompt =
-    persona === "architect"
-      ? architectSystemPrompt
-      : persona === "dealer"
-        ? dealerSystemPrompt
-        : persona === "internal_team"
-          ? internalTeamSystemPrompt
-          : homeownerSystemPrompt;
+  const systemPrompt = IdeaSystemPrompt;
 
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
     model: openrouter("deepseek/deepseek-chat"),
-    system: `${systemPrompt}\n\n${buildProductContext()}`,
+    system: systemPrompt,
     messages: modelMessages,
     tools: chatTools,
     stopWhen: stepCountIs(5),
