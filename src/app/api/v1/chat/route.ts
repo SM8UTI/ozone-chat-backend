@@ -112,9 +112,9 @@ export async function POST(req: Request) {
       );
     }
 
-    if (!body.persona || !["homeowner", "architect", "dealer", "internal_team"].includes(body.persona)) {
+    if (!body.persona || !["nanee-user", "internal_team"].includes(body.persona)) {
       return NextResponse.json(
-        { error: 'persona is required and must be "homeowner", "architect", "dealer", or "internal_team"' },
+        { error: 'persona is required and must be "nanee-user" or "internal_team"' },
         { status: 400, headers: corsHeaders }
       );
     }

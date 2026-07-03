@@ -1,5 +1,5 @@
 // Chat / AI types
-export type Persona = "homeowner" | "architect" | "dealer" | "internal_team";
+export type Persona = "nanee-user" | "internal_team";
 
 export type AnswerType =
   | "open_ended_question"

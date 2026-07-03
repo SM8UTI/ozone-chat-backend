@@ -59,7 +59,7 @@ Send a conversation and receive the Canvas Coach's response as JSON.
 | Field      | Type     | Required | Description                                                                 |
 | ---------- | -------- | -------- | --------------------------------------------------------------------------- |
 | `messages` | array    | Yes      | Conversation history as an array of message objects (see below).            |
-| `persona`  | string   | Yes      | User persona. (Must be `"homeowner"`, `"architect"`, `"dealer"`, or `"internal_team"` to pass validation, though all use the unified Canvas Coach prompt). |
+| `persona`  | string   | Yes      | User persona. (Must be `"nanee-user"` or `"internal_team"` to pass validation, though all use the unified Canvas Coach prompt). |
 
 ### Message Object
 
@@ -174,7 +174,7 @@ Present when `answerType` is `"open_ended_question"` or `"multiple_choice_questi
 ```
 
 ```json
-{ "error": "persona is required and must be \"homeowner\", \"architect\", \"dealer\", or \"internal_team\"" }
+{ "error": "persona is required and must be \"nanee-user\" or \"internal_team\"" }
 ```
 
 ### 500 Internal Server Error
@@ -196,7 +196,7 @@ curl -X POST https://nanee-ai-chat-backend.vercel.app/api/v1/chat \
     "messages": [
       { "role": "user", "content": "I want to build a scheduling tool for freelance tutors." }
     ],
-    "persona": "homeowner"
+    "persona": "nanee-user"
   }'
 ```
 
@@ -210,7 +210,7 @@ const response = await fetch("https://nanee-ai-chat-backend.vercel.app/api/v1/ch
     messages: [
       { role: "user", content: "I want to build a scheduling tool for freelance tutors." },
     ],
-    persona: "homeowner",
+    persona: "nanee-user",
   }),
 });
 
@@ -235,7 +235,7 @@ response = requests.post(
         "messages": [
             {"role": "user", "content": "I want to build a scheduling tool for freelance tutors."}
         ],
-        "persona": "homeowner",
+        "persona": "nanee-user",
     },
 )
 
@@ -272,7 +272,7 @@ async function chat(messages) {
   const res = await fetch("https://nanee-ai-chat-backend.vercel.app/api/v1/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ messages, persona: "homeowner" }),
+    body: JSON.stringify({ messages, persona: "nanee-user" }),
   });
   return res.json();
 }
